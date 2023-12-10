@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=devicewidth, initial-scale="1.0">
+    <title>Aint Valid</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/a122f20fca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="/FORTHUMB/Aint Valid logo final.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Links</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p><span>Content Creator/Editor</span></p>
+        <h1>Keep It <span>Vibin'</span><br>Links For My <span>Socials</span></h1>
+      </div>
+    </div>
+  </div>
+  <!-------About------->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <video autoplay muted loop id="bgvideo">
+        <source src="FORTHUMB/1209(1).mp4" type="video/mp4">
+        Your Browser does not support html 5 video.
+        </video>
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p> My Actual Name is Jonathan and i go by Aint Valid in my Content Creation, 
+          I do Edit Valorant Content And Take Commissions to Edit Videos for Them
+          My Contacts are available below for Commissions and Collaborations. 
+          Alright See Y'all Peeps
+        </p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('what i edit with')">What I Edit With</p>
+          <p class="tab-links" onclick="opentab('my in-game settings')">My In-Game Settings</p>
+          <p class="tab-links" onclick="opentab('my top 3 agents')">My Top 3 Agents</p>
+        </div>
+        <div class="tab-contents active-tab" id="what i edit with">
+          <ul>
+            <li><span>Da Vinci Resolve</span><br> Video Editor</li>
+            <li><span>CapCut</span><br>Short Video Editor</li>
+            <li><span>Photoshop</span><br> Photo/Thumbnail Editor</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="my in-game settings">
+          <ul>
+            <li><span>Mouse Sensitivity</span><br>3200 dpi<br>0.314 Raw Input On<br>Raw Accel Enabled</li>
+            <li><span>Graphics</span><br>All Set To Low</li>
+            <li><span>Enemy Outline</span><br> Red or Yellow</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="my top 3 agents">
+          <ul>
+            <li><span>Jett</span><br>Idk I press W with her</li>
+            <li><span>Raze</span><br>Things just go BOOM</li>
+            <li><span>Astra</span><br>She Calls You Yawa</li>
+          </ul>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<!------------Services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Links</h1>
+        <div class="services-list">
+          <div>
+              <i class="fa-brands fa-youtube"></i>
+              <h2>YouTube</h2>
+              <a href="https://www.youtube.com/@aintvalidvalorant">Subscribe</a>
+          </div>
+          <div>
+              <i class="fa-brands fa-tiktok"></i>
+              <h3>TikTok</h3>
+              <a href="https://www.tiktok.com/@aintvalidvalorant">Follow</a>
+          </div>
+          <div>
+              <i class="fa-brands fa-facebook"></i>
+              <h4>Facebook Gaming</h4>
+             <a href="https://www.facebook.com/aintvalidvalorant">Like</a>
+          </div>
+
+        </div>
+    </div>
+</div>
+
+<!---------Contact-------->
+<div id="contact">
+    <div class="container">
+      <div class="rows">
+          <div class="contact-left"></div>
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>garcinathanjoa@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>+639757327343</p>
+          <div class="social-icons">
+            <a :href="https://www.instagram.com/doesntmakeitvalid/"><i class="fa-brands fa-square-instagram"></i></a>
+            <a :href="https://twitter.com/Aint_Valid"><i class="fa-brands fa-x-twitter"></i></i></a>
+          </div>
+          <div>
+            <a href="https://discord.gg/n6qeSXMp4b" class="btn btn2">Discord Server</a>
+           </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn3">Submit</button>
+            </form>
+          </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+ 
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+  for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+  }
+  for(tabcontent of tabcontents){
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+
+</script>
+
+<script>
+
+  var sidemenu = document.getElementById("sidemenu");
+  function openmenu(){
+    sidemenu.style.right = "0";
+  }
+  function closemenu(){
+    sidemenu.style.right = "-200px";
+  }
+
+</script>
+<script>
+form.addEventListener('submit', e=> {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(Response=> {
+    msg.innerHTML = "Message Sent Successfully"
+    setTimeout(function(){
+      msg.innerHTML = ""
+    },5000)
+    form.reset()
+    })
+  .catch(error=> console.error('Error', error.message))})
+</script>
+
+</body>
+</html>
